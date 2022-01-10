@@ -1,13 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import Users from '../views/Users';
+import getUsers from '../helpers/data/userData';
+import Routes from '../helpers/Routes';
 import './App.scss';
 
 function App() {
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    getUsers().then((response) => setUsers(response));
+  }, []);
+
   return (
     <div className='App'>
       <Router>
-        <Users/>
+        <Routes users={users}/>
       </Router>
     </div>
   );

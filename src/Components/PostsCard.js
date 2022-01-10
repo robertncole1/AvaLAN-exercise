@@ -15,7 +15,7 @@ const PostsCard = ({ ...postObj }) => {
           <Card>
             <CardBody>
               <CardTitle tag="h5">{postObj.title}</CardTitle>
-            <CardText>Phone Number: {postObj.body}</CardText>
+            <CardText>{postObj.body}</CardText>
             <Button className="delete-link" onClick={() => handleClick()}>Post&apos;s Comments</Button>
             </CardBody>
         </Card>

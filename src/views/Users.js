@@ -1,25 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import UserCard from '../Components/UserCard';
-import getUsers from '../helpers/data/userData';
 
-function Users() {
-  const [users, setUsers] = useState([]);
-
-  useEffect(() => {
-    getUsers().then((response) => setUsers(response));
-  }, []);
+function Users({ users }) {
   return (
-    <>
+    <div>
       <h1 className="page-title">Users</h1>
-      <div className="user-container">
+      <div className="container">
         {users.map((userObj) => (
           <UserCard key={userObj.id}
             {...userObj}
           />
         ))}
       </div>
-    </>
+    </div>
   );
 }
+
+Users.propTypes = {
+  users: PropTypes.array,
+};
 
 export default Users;
