@@ -3,5 +3,8 @@
 @import 'cardStyles';
 
 body {
-  background-color: $favColor;
+  background-color: $bgColor !important;
+  h1{
+    text-align: center;
+  }
 }

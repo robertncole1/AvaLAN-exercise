@@ -14,7 +14,7 @@ function App() {
   return (
     <div className='App'>
       <Router>
-        <Routes users={users}/>
+        <Routes users={users} setUsers={setUsers}/>
       </Router>
     </div>
   );
