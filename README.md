@@ -1,5 +1,8 @@
 # UI DEVELOPER CODING CHALLENGE
 
+## Deploy Link
+https://avalan-exercise.netlify.app/
+
 ## Requirements
 1. Create a single page application that lists users (some sorting is preferred).
 2. Clicking on the user (or a button) takes to the post history of the user.
