@@ -21,7 +21,7 @@ const UserCard = ({ ...userObj }) => {
             <CardText>Website: {userObj.website}</CardText>
             <CardText>Company Name: {userObj.company.name}</CardText>
             <CardText>Catch Phrase: {userObj.company.catchPhrase}</CardText>
-            <Button className="delete-link" onClick={() => handleClick()}>User&apos;s Posts</Button>
+            <Button className="primary-btn" onClick={() => handleClick()}>User&apos;s Posts</Button>
             </CardBody>
         </Card>
     </>

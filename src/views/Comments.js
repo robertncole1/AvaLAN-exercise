@@ -13,7 +13,11 @@ function Comments() {
 
   return (
     <div>
-      <h1 className="page-title">Comments</h1>
+      <div className="hero-image">
+        <div className="hero-text">
+          <h2>Comments</h2>
+        </div>
+      </div>
       <div className="container">
         {commentsById.map((commentObj) => (
           <CommentsCard key={commentObj.id}

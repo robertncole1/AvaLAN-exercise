@@ -13,7 +13,11 @@ function Posts() {
 
   return (
     <div>
-      <h1 className="page-title">Posts</h1>
+      <div className="hero-image">
+        <div className="hero-text">
+          <h2>Posts</h2>
+        </div>
+      </div>
       <div className="container">
         {postsById.map((postObj) => (
           <PostsCard key={postObj.id}
