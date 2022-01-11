@@ -1,17 +1,21 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
+import getUsers from '../helpers/data/userData';
+import Routes from '../helpers/Routes';
 import './App.scss';
 
 function App() {
-  const [domWriting, setDomWriting] = useState('Nothing Here!');
+  const [users, setUsers] = useState([]);
 
-  const handleClick = (e) => {
-    console.warn(`You clicked ${e.target.id}`);
-    setDomWriting(`You clicked ${e.target.id}! Check the Console!`);
-  };
+  useEffect(() => {
+    getUsers().then((response) => setUsers(response));
+  }, []);
 
   return (
     <div className='App'>
-      
+      <Router>
+        <Routes users={users} setUsers={setUsers}/>
+      </Router>
     </div>
   );
 }

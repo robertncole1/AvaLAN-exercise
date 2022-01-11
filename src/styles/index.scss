@@ -1,6 +1,58 @@
 @import "~@fortawesome/fontawesome-free/css/all.min.css";
 @import 'variables';
+@import 'cardStyles';
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 body {
-  background-color: $favColor;
+  background-color: $bgColor !important;
+  font-family: 'Lato', sans-serif;
+  h1{
+    text-align: center;
+  }
+}
+
+.hero-image {
+  background-color: $avalanBlue;
+  width:100%;
+  padding: 100px 60px;
+  color:#fff;
+  margin-bottom: 80px;
+}
+
+.hero-text {
+  display: block;
+  position: relative;
+  color: white;
+
+  h2 {
+    font-weight: 700;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    text-align: center;
+  }
+}
+
+.btn-cont {
+  text-align: center;
+}
+
+.primary-btn {
+  margin: 10px;
+  background-color: $avalanBlue !important;
+  color: white !important;
+  border: 2px solid $avalanBlue !important;
+  border-radius: 0 !important;
+}
+
+.primary-btn:hover {
+  background-color: transparent !important;
+  color: $avalanBlue !important;
+}
+
+.secondary-btn {
+  border-radius: 0 !important;
+}
+
+.container {
+  margin-bottom: 80px;
 }
